@@ -1,0 +1,13 @@
+body {
+    background-color: #FDEDA1;
+}
+
+h1 {
+    color: #322A04;
+}
+
+.container {
+    background-color: #FADC44;
+    min-width: 1007px;
+    min-height: 673px;
+}
