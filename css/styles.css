@@ -8,6 +8,21 @@ h1 {
 
 .container {
     background-color: #FADC44;
-    min-width: 1007px;
-    min-height: 673px;
+    min-width: 62.9375rem;
+    min-height: 42.0625rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Vier kolommen */
+    gap: 2rem;
+}
+
+.card {
+    background-color: #4B3F06;
+    max-width: 10rem;
+    max-height: 10rem;
+    border-radius: 1rem;
 }
