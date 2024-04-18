@@ -1,5 +1,5 @@
 (() => {
-    function renderData() {
+    function createData() {
         function chooseAnimals() {
             let animals = new Set();
 
@@ -25,11 +25,25 @@
                 [animal_list[i], animal_list[j]] = [animal_list[j], animal_list[i]];
             }
 
-            console.log(animal_list);
+            data = animal_list;
+
+            function renderData(data) {
+                const $container = document.getElementById("container");
+                
+                for (let i = 0; i < 12; i++) {
+                    const card_container = document.createElement("div");
+                    card_container.className = "card";
+                    $container.appendChild(card_container);
+                }
+            }
+
+            renderData(data);
 
         }
 
         makeBoard(animals);
     }
-    renderData();
+
+    createData();
+
 })();
