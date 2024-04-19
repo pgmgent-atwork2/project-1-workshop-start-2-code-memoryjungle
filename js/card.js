@@ -1,6 +1,7 @@
 (() => {
     let elementsSelected = 0;
     let firstCardSelected = null;
+    let firstCardName = null;
     
     function chooseAnimals() {
         let animals = new Set();
@@ -68,23 +69,25 @@
 
                     elementsSelected++;
 
-                    if (elementsSelected === 1)
+                    if (elementsSelected === 1) {
                         firstCardSelected = card_container;
-                    else if (elementsSelected === 2) {
-                        setTimeout(function () {
-                            firstCardSelected.classList.remove("flipped");
-                            card_container.classList.remove("flipped");
+                        firstCardName = data[i];
+                    } else if (elementsSelected === 2) {
+                        if (data[i] !== firstCardName) {
+                            setTimeout(function () {
+                                firstCardSelected.classList.remove("flipped");
+                                card_container.classList.remove("flipped");
+                                elementsSelected = 0;
+                                firstCardSelected = null;
+                            }, 2000);
+                        } else {
                             elementsSelected = 0;
                             firstCardSelected = null;
-                        }, 2000);
+                            firstCardName = null;
+                        }
                     }
                 }
 
-                // card_container.classList.add("flipped"); 
-
-                // setTimeout(function() {
-                //     card_container.classList.remove("flipped");
-                // }, 2000);
             } 
             $container.appendChild(card_container);
 
