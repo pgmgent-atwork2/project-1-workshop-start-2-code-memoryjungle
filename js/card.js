@@ -75,12 +75,21 @@
                     } else if (elementsSelected === 2) {
                         if (data[i] !== firstCardName) {
                             setTimeout(function () {
-                                firstCardSelected.classList.remove("flipped");
-                                card_container.classList.remove("flipped");
-                                elementsSelected = 0;
-                                firstCardSelected = null;
+                                firstCardSelected.classList.add("shake"); 
+                                card_container.classList.add("shake"); 
 
-                            }, 2000);
+                                setTimeout(function () {
+                                    firstCardSelected.classList.remove("shake");
+                                    card_container.classList.remove("shake");
+                                }, 400);
+
+                                setTimeout(function () {
+                                    firstCardSelected.classList.remove("flipped");
+                                    card_container.classList.remove("flipped");
+                                    elementsSelected = 0;
+                                    firstCardSelected = null;
+                                }, 1000);
+                            }, 200);
                         } else {
                             elementsSelected = 0;
                             firstCardSelected = null;
