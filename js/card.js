@@ -48,7 +48,6 @@
                 return "snake";
             case 9:
                 return "tiger";
-
         }
     })
 
@@ -59,6 +58,13 @@
         for (let i = 0; i < 12; i++) {
             const card_container = document.createElement("div");
             card_container.className = "card";
+            card_container.onclick = function() {
+                card_container.classList.add("flipped"); 
+
+                setTimeout(function() {
+                    card_container.classList.remove("flipped");
+                }, 2000);
+            } 
             $container.appendChild(card_container);
 
             const name = document.createElement("h3");
@@ -73,7 +79,7 @@
             card_container.appendChild(image);
         }
     }
-
+    
     renderData(data);
 
     randomizeCards(animals);
