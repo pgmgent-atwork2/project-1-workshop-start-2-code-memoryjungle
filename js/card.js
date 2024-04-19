@@ -64,7 +64,7 @@
             card_container.className = "card";
             card_container.onclick = function() {
                 
-                if (!card_container.classList.contains("flipped")) {
+                if (!card_container.classList.contains("flipped") && elementsSelected < 2) {
                     card_container.classList.add("flipped");
 
                     elementsSelected++;
@@ -79,6 +79,7 @@
                                 card_container.classList.remove("flipped");
                                 elementsSelected = 0;
                                 firstCardSelected = null;
+
                             }, 2000);
                         } else {
                             elementsSelected = 0;
@@ -89,12 +90,8 @@
                 }
 
             } 
+
             $container.appendChild(card_container);
-
-            const name = document.createElement("h3");
-            name.textContent = data[i];
-
-            card_container.appendChild(name);
 
             const image = document.createElement("img");
             const imageSource = "./img/" + data[i] + ".jpg"; 
