@@ -33,6 +33,7 @@ h1 {
     & h3 {
         color: #FDEDA1;
         margin-top: 1rem;
+        display: none;
     }
 
     & img {
@@ -40,7 +41,8 @@ h1 {
     }
 }
 
-.card.flipped img {
+.card.flipped img,
+.card.flipped h3 {
     display: block;
 }
 

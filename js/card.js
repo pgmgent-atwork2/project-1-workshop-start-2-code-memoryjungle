@@ -18,8 +18,8 @@
         let animal_list = []; 
 
         animals.forEach(animal => {
-            animal_list.push(animal)
-            animal_list.push(animal)
+            animal_list.push(animal);
+            animal_list.push(animal);
         });
 
         for (let i = animal_list.length - 1; i > 0; i--) {
@@ -107,6 +107,11 @@
             image.src = imageSource; 
 
             card_container.appendChild(image);
+
+            const name = document.createElement("h3");
+            name.textContent = data[i];
+
+            card_container.appendChild(name);
         }
     }
     
