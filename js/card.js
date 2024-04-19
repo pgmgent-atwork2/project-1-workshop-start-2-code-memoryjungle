@@ -31,23 +31,23 @@
     data = data.map(animal => {
         switch(animal) {
             case 1:
-                return "Ape";
+                return "ape";
             case 2:
-                return "Crocodile"; 
+                return "crocodile"; 
             case 3: 
-                return "Frog";
+                return "frog";
             case 4:
-                return "Gibbon";
+                return "gibbon";
             case 5:
-                return "Girafe";
+                return "girafe";
             case 6:
-                return "Lion";
+                return "lion";
             case 7:
-                return "Parrot";
+                return "parrot";
             case 8:
-                return "Snake";
+                return "snake";
             case 9:
-                return "Tiger";
+                return "tiger";
 
         }
     })
@@ -65,6 +65,12 @@
             name.textContent = data[i];
 
             card_container.appendChild(name);
+
+            const image = document.createElement("img");
+            const imageSource = "./img/" + data[i] + ".jpg"; 
+            image.src = imageSource; 
+
+            card_container.appendChild(image);
         }
     }
 
