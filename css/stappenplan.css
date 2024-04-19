@@ -57,11 +57,23 @@ body{
 
     & h2{
         color: var(--textColor);
+        margin: 1rem auto;
+    }
+
+    & ul{
+        display: flex;
     }
 
     & li{
         color: var(--subTextColor);
-        
+        margin:0 1rem;
+        list-style: none;
+        background-color: var(--cardColor);
+        padding: 1rem;
+        border-radius: 20px;
+        width: 20%;
+        aspect-ratio: 1/1;
+
     }
 
 }
