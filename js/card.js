@@ -1,4 +1,7 @@
 (() => {
+    let elementsSelected = 0;
+    let firstCardSelected = null;
+    
     function chooseAnimals() {
         let animals = new Set();
 
@@ -59,11 +62,29 @@
             const card_container = document.createElement("div");
             card_container.className = "card";
             card_container.onclick = function() {
-                card_container.classList.add("flipped"); 
+                
+                if (!card_container.classList.contains("flipped")) {
+                    card_container.classList.add("flipped");
 
-                setTimeout(function() {
-                    card_container.classList.remove("flipped");
-                }, 2000);
+                    elementsSelected++;
+
+                    if (elementsSelected === 1)
+                        firstCardSelected = card_container;
+                    else if (elementsSelected === 2) {
+                        setTimeout(function () {
+                            firstCardSelected.classList.remove("flipped");
+                            card_container.classList.remove("flipped");
+                            elementsSelected = 0;
+                            firstCardSelected = null;
+                        }, 2000);
+                    }
+                }
+
+                // card_container.classList.add("flipped"); 
+
+                // setTimeout(function() {
+                //     card_container.classList.remove("flipped");
+                // }, 2000);
             } 
             $container.appendChild(card_container);
 
