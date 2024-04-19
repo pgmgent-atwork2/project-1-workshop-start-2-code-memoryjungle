@@ -1,0 +1,67 @@
+:root{
+    --background: hsl(50, 96%, 81%);
+    --textColor: hsl(50, 85%, 11%);
+    --subTextColor: hsl(50, 85%, 21%);
+    --cardColor: hsl(50, 95%, 62%);
+}
+
+body{
+    background-color: var(--background);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 1rem;
+}
+
+.title_SP{
+    margin: 2rem auto;
+
+    & h1{
+        color: var(--textColor);
+    }
+
+    & p{
+        color: var(--subTextColor);
+    }
+}
+
+.SP__step-one{
+    margin: 2rem auto;
+    
+    & h2{
+        color: var(--textColor);
+        margin: 1rem auto;
+    }
+
+    & ul{
+        display: flex;
+    }
+
+    & li{
+        color: var(--subTextColor);
+        margin:0 1rem;
+        list-style: none;
+        background-color: var(--cardColor);
+        padding: 1rem;
+        border-radius: 20px;
+        width: 20%;
+        aspect-ratio: 1/1;
+
+    }
+
+    & .img__size--small{
+        width: 50px;
+    }
+}
+
+.SP__step-two{
+    margin: 2rem auto;
+
+    & h2{
+        color: var(--textColor);
+    }
+
+    & li{
+        color: var(--subTextColor);
+        
+    }
+
+}
