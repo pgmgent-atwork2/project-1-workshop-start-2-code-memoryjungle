@@ -9,6 +9,7 @@ h1 {
 
 #container {
     background-color: #FADC44;
+    border-radius: 2rem;
     min-width: 62.9375rem;
     min-height: 42.0625rem;
     position: absolute;
@@ -19,7 +20,7 @@ h1 {
     padding-bottom: 3rem;
     padding-left: 3rem;
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Vier kolommen */
+    grid-template-columns: repeat(4, 1fr); 
     gap: 2rem;
 }
 
