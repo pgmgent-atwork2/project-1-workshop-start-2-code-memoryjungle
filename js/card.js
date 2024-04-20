@@ -43,7 +43,7 @@
             case 4:
                 return "gibbon";
             case 5:
-                return "girafe";
+                return "giraffe";
             case 6:
                 return "lion";
             case 7:

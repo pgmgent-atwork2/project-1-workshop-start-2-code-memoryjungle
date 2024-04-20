@@ -25,19 +25,27 @@ h1 {
 }
 
 .card {
+    position: relative;
     background-color: #4B3F06;
-    max-width: 10rem;
-    max-height: 12rem;
+    width: 10rem;
+    height: 12rem;
     border-radius: 1rem;
+    overflow: hidden;
 
     & h3 {
         color: #FDEDA1;
-        margin-top: 1rem;
+        position: relative;
+        margin-top: 9rem;
         display: none;
     }
 
     & img {
         display: none;
+        position: absolute;
+        top: 0; /* Toegevoegd: zet de positie van de bovenkant van de afbeelding op 0 (bovenkant van de kaartcontainer) */
+        left: 0; /* Toegevoegd: zet de positie van de linkerkant van de afbeelding op 0 (linkerkant van de kaartcontainer) */
+        width: 100%; /* Toegevoegd: om ervoor te zorgen dat de afbeelding de volledige breedte van de kaartcontainer inneemt */
+        height: 8rem;
     }
 }
 
