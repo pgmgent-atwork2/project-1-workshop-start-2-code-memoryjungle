@@ -41,6 +41,11 @@ h1 {
     }
 }
 
+.card.flipped img {
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
 .card.flipped img,
 .card.flipped h3 {
     display: block;
