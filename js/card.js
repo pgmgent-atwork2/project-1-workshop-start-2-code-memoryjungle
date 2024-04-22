@@ -79,8 +79,20 @@
 
             message_container.appendChild(refreshButton);
 
+            const tekst = document.createElement("p");
+            tekst.textContent = "Wil je zien hoe je dit kunt maken? kijk dan naar ons"
+
+            message_container.appendChild(tekst);
+
+            const link = document.createElement("a");
+            link.href = "stappenplan.html";
+            link.textContent = "stappenplan";
+
+            message_container.appendChild(link);
+
             const sound = new Audio("sounds/ta-da.mp3");
             sound.play();
+
 
         }
     }

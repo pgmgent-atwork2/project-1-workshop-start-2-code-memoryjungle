@@ -89,4 +89,8 @@ h1 {
         border-radius: 1rem;
         margin-top: 2rem;
     }
+
+    & a {
+        color: #4B3F06;
+    }
 }
