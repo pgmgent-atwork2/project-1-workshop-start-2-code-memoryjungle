@@ -79,6 +79,9 @@
 
             message_container.appendChild(refreshButton);
 
+            const sound = new Audio("sounds/ta-da.mp3");
+            sound.play();
+
         }
     }
 
