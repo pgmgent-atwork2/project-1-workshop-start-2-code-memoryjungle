@@ -70,3 +70,23 @@ h1 {
 .shake {
     animation: shake 0.4s ease;
 }
+
+.message_container {
+    min-width: 62.9375rem;
+    min-height: 42.0625rem;
+    position: absolute;
+    border-radius: 2rem;
+    padding-top: 5rem;
+
+    & h3 {
+        color: #4B3F06;
+    }
+
+    & button {
+        color: #4B3F06;
+        background-color: #FDEDA1;
+        border: 1px solid #4B3F06;
+        border-radius: 1rem;
+        margin-top: 2rem;
+    }
+}

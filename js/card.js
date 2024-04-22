@@ -2,6 +2,7 @@
     let elementsSelected = 0;
     let firstCardSelected = null;
     let firstCardName = null;
+    let mathingPairs = 0;
     
     function chooseAnimals() {
         let animals = new Set();
@@ -55,6 +56,31 @@
         }
     })
 
+    function checkForWin() {
+        if (mathingPairs === 6) {
+            const $container = document.getElementById("container");
+            $container.innerHTML = "";
+
+            const message_container = document.createElement("div");
+            message_container.className = "message_container";
+
+            $container.appendChild(message_container);
+            
+            const message = document.createElement("h3");
+            message.textContent = "Goed gespeeld!";
+
+            message_container.appendChild(message);
+
+            const refreshButton = document.createElement("button");
+            refreshButton.textContent = "Speel opnieuw";
+            refreshButton.onclick = function() {
+                location.reload();
+            }
+
+            message_container.appendChild(refreshButton);
+
+        }
+    }
 
     function renderData(data) {
         const $container = document.getElementById("container");
@@ -91,9 +117,11 @@
                                 }, 1000);
                             }, 200);
                         } else {
+                            mathingPairs++;
                             elementsSelected = 0;
                             firstCardSelected = null;
                             firstCardName = null;
+                            checkForWin();
                         }
                     }
                 }
