@@ -42,9 +42,9 @@ h1 {
     & img {
         display: none;
         position: absolute;
-        top: 0; /* Toegevoegd: zet de positie van de bovenkant van de afbeelding op 0 (bovenkant van de kaartcontainer) */
-        left: 0; /* Toegevoegd: zet de positie van de linkerkant van de afbeelding op 0 (linkerkant van de kaartcontainer) */
-        width: 100%; /* Toegevoegd: om ervoor te zorgen dat de afbeelding de volledige breedte van de kaartcontainer inneemt */
+        top: 0; 
+        left: 0; 
+        width: 100%; 
         height: 8rem;
     }
 }
