@@ -6,6 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="./css/reset.css"> 
     <link rel="stylesheet" href="./css/stappenplan.css">
+    <link rel="stylesheet" href="css/prism.css">
 </head>
 <body>
     <div class="title_SP">
@@ -54,7 +55,7 @@
         <li>Eerst moeten we de link leggen tussen HTML en Javascript. Dat doen we door de volgende regel toe te voegen vlak voor de sluitingstag van je body.</li>
             <ul>
                 <li>
-                    <code>
+                    <code class="language-html">
                         &lt;script src="./js/card.js"&gt;&lt;/script&gt;
                     </code>
                 </li>
@@ -64,7 +65,7 @@
             <li>Voeg onderstaande code toe aan je gelinkte javascript bestand om te controleren of de link werkt.</li>
             <ul>
                 <li>
-                    <code>
+                    <code class="language-js">
                         alert("Hello World!");
                     </code>
                 </li>
@@ -75,7 +76,7 @@
         <ul>
             <li>Voeg eerst deze variabelen toe. Deze worden in de andere functies gebruikt.</li>
             <pre>
-                <code>
+                <code class="language-js">
                     let elementsSelected = 0;
                     let firstCardSelected = null;
                     let firstCardName = null;
@@ -87,7 +88,7 @@
             <li>Eerst moeten we beginnen met dieren te selecteren om in het spel te steken. Dit doen we door de volgende functie in ons Javascript bestand te steken:</li>
             <ul>
                 <pre>
-                    <code>
+                    <code class="language-js">
                         function chooseAnimals() {
                             let animals = new Set();
                         
@@ -104,7 +105,7 @@
             <li>Nu we de dieren hebben kunnen we de kaarten maken door elk dier dubbel te hebben en de plaatsen random te maken. dit doen we door deze functie toe te voegen:</li>
             <ul>
                 <pre>
-                    <code>
+                    <code class="language-js">
                         function randomizeCards(animals) {
                             let animal_list = []; 
                         
@@ -127,7 +128,7 @@
                 <li>Een laatste stap om onze data in orde te brengen is om ervoor te zorgen dat we via de naam in de array aan de juiste foto kunnen om dit te kunnen tonen op een kaart. Voeg deze code toe om dit te kunnen realiseren.</li>
                 <ul>
                     <pre>
-                        <code>
+                        <code class="language-js">
                             data = data.map(animal => {
                                 switch(animal) {
                                     case 1:
@@ -158,7 +159,7 @@
         <li>Nu we onze data hebben is het tijd om onze data toe te voegen aan het spelbord. Dit kan gedaan worden in 1 functie.</li>
         <ul>
             <pre>
-                <code>
+                <code class="language-js">
                     function renderData(data) {
                         const $container = document.getElementById("container");
                         
@@ -228,7 +229,7 @@
         <li>Wat nu nog moet gebeuren is een belangrijke stap, we hebben een paar functies geschreven maar nog niet aangeroepen. Dit zorgt ervoor dat ze nooit worden uitgevoerd. Voeg dit nog toe aan je code:</li>
         <ul>
             <pre>
-                <code>
+                <code class="language-js">
                     renderData(data);
 
                     randomizeCards(animals);
@@ -238,7 +239,7 @@
         <li>We zitten nu aan de laatste stap van onze Javascript. We moeten nu controleren of we gewonnen hebben of niet. Voeg deze functie toe vlak voor je <strong>renderData(data)</strong> functie.</li>
         <ul>
             <pre>
-                <code>
+                <code class="language-js">
                     function checkForWin() {
                         if (mathingPairs === 6) {
                             const $container = document.getElementById("container");
@@ -282,5 +283,6 @@
             <li>Deze functie doet niet zo veel, het controleert of we 6 duo's gevonden hebben. Als we er 6 hebben gevonden dan wordt een tekst en knop (om opnieuw te spelen) op het scherm getoond.</li>
         </ul>
     </ul>
+    <script src="js/prism.js"></script>
 </body>
 </html>
