@@ -9,84 +9,99 @@
     <link rel="stylesheet" href="css/prism.css">
 </head>
 <body>
-    <div class="title_SP">
-    <h1>Workshop</h1> 
-    <p>We gaan memory jungle van scratch maken!</p>
-    </div>
+    <div class="SP__container">
+    <aside>
+        <h2>MemoryJungle</h2>
+        <ul class="aside__nav">
+            <li><a href="./index.html">Speel</a></li>
+            <li><a href="./stappenplan.html">Maak het zelf</a></li>
+        </ul>
+    </aside>
 
-    <div class="SP__step-one">
-    <h2>Stap 1. Mappen en bestanden</h2>
-    <ul>
-        <li>
-        Maak een nieuwe map aan en geef het de naam <strong>Memory Jungle</strong>.
-        <img src="./img/map.png">
-        </li>
+    <div class="stappenplan">
+        <div class="title_SP">
+            <h1>Workshop</h1> 
+            <p>We gaan memory jungle van scratch maken!</p>
+        </div>
 
-        <li>
-        Open de map in Visual Studio Code.
-        <img class="img__size--small" src="./img/visual-studio-code-icon.webp">
-        </li>
-
-        <li>
-        Bouw onderstaande mappenstructuur na.
-        </li>
-
-        <li>
-        ga binnen visual studio code naar extensions en installeer de plugin <strong>Live Server</strong>.
-        </li>
-
-        <li>
-        Start de live server door onderaan op de knop <strong>Go Live</strong> te klikken. Als het goed verlopen is opent nu de browser en zie je een blanco pagina
-        </li>
-    </ul>
-    </div>
-
-    <div class="SP__step-two">
-    <h2>Stap 2. HTML & CSS</h2> 
-    <p>Nu is het tijd om te coderen...</p>
-    <ul>
-        <li>Kopieer nu onderstaande code in jouw <strong>index.html</strong></li>
-        <li>Kopieer onderstaande code in jouw <strong>styles.css</strong></li>
-    </ul> 
-    </div>
-
-    <h2>Stap 3. Interactiviteit met Javascript</h2>
-    <ul>
-        <li>Eerst moeten we de link leggen tussen HTML en Javascript. Dat doen we door de volgende regel toe te voegen vlak voor de sluitingstag van je body.</li>
+    <div class="SP__step--one">
+        <h2>Stap 1. Mappen en bestanden</h2>
             <ul>
                 <li>
+                <p>Maak een nieuwe map aan en geef het de naam <strong>Memory Jungle</strong>.</p>
+                <img src="./img/map.png">
+                </li>
+
+                <li>
+                <p>Open de map in Visual Studio Code.</p>
+                <img class="img__size--small" src="./img/visual-studio-code-icon.webp">
+                </li>
+
+                <li>
+                <p>Bouw onderstaande mappenstructuur na.</p>
+                </li>
+
+                <li>
+                <p>ga binnen visual studio code naar extensions en installeer de plugin <strong>Live Server</strong>.</p>
+                </li>
+
+                <li>
+                <p>Start de live server door onderaan op de knop <strong>Go Live</strong> te klikken. Als het goed verlopen is opent nu de browser en zie je een blanco pagina</p>
+                </li>
+            </ul>
+    </div>
+
+    <div class="SP__step--two">
+        <h2>Stap 2. HTML & CSS</h2> 
+        <p>Nu is het tijd om te coderen...</p>
+        <ul>
+            <li>Kopieer nu onderstaande code in jouw <strong>index.html</strong></li>
+            <li>Kopieer onderstaande code in jouw <strong>styles.css</strong></li>
+        </ul> 
+    </div>
+
+    <div class="SP__step--three">
+        <h2>Stap 3. JavaScript</h2>
+        <p>De laatste stap is het toevoegen van JavaScript.</p>
+        <ul>
+            <li>Eerst moeten we de link leggen tussen HTML en Javascript. Dat doen we door de volgende regel toe te voegen vlak voor de sluitingstag van je body.
+                <pre>
                     <code class="language-html">
                         &lt;script src="./js/card.js"&gt;&lt;/script&gt;
                     </code>
-                </li>
-            </ul>
-        <li>Optioneel - controleer de link</li>
-        <ul>
-            <li>Voeg onderstaande code toe aan je gelinkte javascript bestand om te controleren of de link werkt.</li>
-            <ul>
-                <li>
+                </pre>
+            </li>
+
+            <li>Optioneel - controleer de link</li>
+
+            <li>
+                <p>Voeg onderstaande code toe aan je gelinkte javascript bestand om te controleren of de link werkt.</p>
+                <pre>
                     <code class="language-js">
                         alert("Hello World!");
                     </code>
-                </li>
-            </ul>
-            <li>Sla het bestand op en kijk of je op het scherm "Hello World" ziet verschijnen. Zo ja dan is de link correct.</li>
-        </ul>
-        <li>Nu is het tijd om code toe te voegen. De eerste stap is onze data in order brengen.</li>
-        <ul>
-            <li>Voeg eerst deze variabelen toe. Deze worden in de andere functies gebruikt.</li>
-            <pre>
+                </pre>
+                <p>Sla het bestand op en kijk of je op het scherm "Hello World" ziet verschijnen. Zo ja dan is de link correct.</p>
+            </li>
+
+            <li>
+                <p>Nu is het tijd om code toe te voegen. De eerste stap is onze data in order brengen.</p>
+            </li>
+
+            <li>
+                <p>Voeg eerst deze variabelen toe. Deze worden in de andere functies gebruikt.</p>
+                <pre>
                 <code class="language-js">
                     let elementsSelected = 0;
                     let firstCardSelected = null;
                     let firstCardName = null;
                     let mathingPairs = 0;
                 </code>
-            </pre>
-        </ul>
-        <ul>
-            <li>Eerst moeten we beginnen met dieren te selecteren om in het spel te steken. Dit doen we door de volgende functie in ons Javascript bestand te steken:</li>
-            <ul>
+                </pre>
+            </li>
+
+            <li>
+                <p>Eerst moeten we beginnen met dieren te selecteren om in het spel te steken. Dit doen we door de volgende functie in ons Javascript bestand te steken:</p>
                 <pre>
                     <code class="language-js">
                         function chooseAnimals() {
@@ -100,10 +115,11 @@
                         let animals = chooseAnimals();
                     </code>
                 </pre>
-                <li>Door deze functie toe te voegen hebben we een variabele "animals" waar er 6 dieren geselecteert zijn om in het spel te steken.</li>
-            </ul>
-            <li>Nu we de dieren hebben kunnen we de kaarten maken door elk dier dubbel te hebben en de plaatsen random te maken. dit doen we door deze functie toe te voegen:</li>
-            <ul>
+                <p>Door deze functie toe te voegen hebben we een variabele "animals" waar er 6 dieren geselecteert zijn om in het spel te steken.</p>
+            </li>
+
+            <li>
+                <p>Nu we de dieren hebben kunnen we de kaarten maken door elk dier dubbel te hebben en de plaatsen random te maken. dit doen we door deze functie toe te voegen:</p>
                 <pre>
                     <code class="language-js">
                         function randomizeCards(animals) {
@@ -124,165 +140,175 @@
                         let data = randomizeCards(animals);
                     </code>
                 </pre>
-                <li>Door deze functie aan de variabele data toe te wijzen hebben we de volgorde van kaarten in een array zitten. Om de kaarten uiteindelijk te tonen hoeven we gewoon over deze array itereren.</li>
-                <li>Een laatste stap om onze data in orde te brengen is om ervoor te zorgen dat we via de naam in de array aan de juiste foto kunnen om dit te kunnen tonen op een kaart. Voeg deze code toe om dit te kunnen realiseren.</li>
-                <ul>
-                    <pre>
-                        <code class="language-js">
-                            data = data.map(animal => {
-                                switch(animal) {
-                                    case 1:
-                                        return "aap";
-                                    case 2:
-                                        return "krokodil"; 
-                                    case 3: 
-                                        return "kikker";
-                                    case 4:
-                                        return "gibbon";
-                                    case 5:
-                                        return "giraf";
-                                    case 6:
-                                        return "leeuw";
-                                    case 7:
-                                        return "papagaai";
-                                    case 8:
-                                        return "slang";
-                                    case 9:
-                                        return "tijger";
-                                }
-                            })
-                        </code>
-                    </pre>
-                </ul>
-            </ul>
-        </ul>
-        <li>Nu we onze data hebben is het tijd om onze data toe te voegen aan het spelbord. Dit kan gedaan worden in 1 functie.</li>
-        <ul>
-            <pre>
-                <code class="language-js">
-                    function renderData(data) {
-                        const $container = document.getElementById("container");
+                <p>Door deze functie aan de variabele data toe te wijzen hebben we de volgorde van kaarten in een array zitten. Om de kaarten uiteindelijk te tonen hoeven we gewoon over deze array itereren.</p>
+            </li>
+
+            <li>
+                <p>Een laatste stap om onze data in orde te brengen is om ervoor te zorgen dat we via de naam in de array aan de juiste foto kunnen om dit te kunnen tonen op een kaart. Voeg deze code toe om dit te kunnen realiseren.</p>
+                <pre>
+                    <code class="language-js">
+                        data = data.map(animal => {
+                            switch(animal) {
+                                case 1:
+                                    return "aap";
+                                case 2:
+                                    return "krokodil"; 
+                                case 3: 
+                                    return "kikker";
+                                case 4:
+                                    return "gibbon";
+                                case 5:
+                                    return "giraf";
+                                case 6:
+                                    return "leeuw";
+                                case 7:
+                                    return "papagaai";
+                                case 8:
+                                    return "slang";
+                                case 9:
+                                    return "tijger";
+                            }
+                        })
+                    </code>
+                </pre>
+
+            </li>
+
+            <li>
+                <p>Nu we onze data hebben is het tijd om onze data toe te voegen aan het spelbord. Dit kan gedaan worden in 1 functie.</p>
+                <pre>
+                    <code class="language-js">
+                        function renderData(data) {
+                            const $container = document.getElementById("container");
+                            
+                            for (let i = 0; i < 12; i++) {
+                                const card_container = document.createElement("div");
+                                card_container.className = "card";
+                                card_container.onclick = function() {
+                                    
+                                    if (!card_container.classList.contains("flipped") && elementsSelected < 2) {
+                                        card_container.classList.add("flipped");
                         
-                        for (let i = 0; i < 12; i++) {
-                            const card_container = document.createElement("div");
-                            card_container.className = "card";
-                            card_container.onclick = function() {
-                                
-                                if (!card_container.classList.contains("flipped") && elementsSelected < 2) {
-                                    card_container.classList.add("flipped");
-                    
-                                    elementsSelected++;
-                    
-                                    if (elementsSelected === 1) {
-                                        firstCardSelected = card_container;
-                                        firstCardName = data[i];
-                                    } else if (elementsSelected === 2) {
-                                        if (data[i] !== firstCardName) {
-                                            setTimeout(function () {
-                                                firstCardSelected.classList.add("shake"); 
-                                                card_container.classList.add("shake"); 
-                    
+                                        elementsSelected++;
+                        
+                                        if (elementsSelected === 1) {
+                                            firstCardSelected = card_container;
+                                            firstCardName = data[i];
+                                        } else if (elementsSelected === 2) {
+                                            if (data[i] !== firstCardName) {
                                                 setTimeout(function () {
-                                                    firstCardSelected.classList.remove("shake");
-                                                    card_container.classList.remove("shake");
-                                                }, 400);
-                    
-                                                setTimeout(function () {
-                                                    firstCardSelected.classList.remove("flipped");
-                                                    card_container.classList.remove("flipped");
-                                                    elementsSelected = 0;
-                                                    firstCardSelected = null;
-                                                }, 1000);
-                                            }, 200);
-                                        } else {
-                                            mathingPairs++;
-                                            elementsSelected = 0;
-                                            firstCardSelected = null;
-                                            firstCardName = null;
-                                            checkForWin();
+                                                    firstCardSelected.classList.add("shake"); 
+                                                    card_container.classList.add("shake"); 
+                        
+                                                    setTimeout(function () {
+                                                        firstCardSelected.classList.remove("shake");
+                                                        card_container.classList.remove("shake");
+                                                    }, 400);
+                        
+                                                    setTimeout(function () {
+                                                        firstCardSelected.classList.remove("flipped");
+                                                        card_container.classList.remove("flipped");
+                                                        elementsSelected = 0;
+                                                        firstCardSelected = null;
+                                                    }, 1000);
+                                                }, 200);
+                                            } else {
+                                                mathingPairs++;
+                                                elementsSelected = 0;
+                                                firstCardSelected = null;
+                                                firstCardName = null;
+                                                checkForWin();
+                                            }
                                         }
                                     }
-                                }
-                    
-                            } 
-                    
-                            $container.appendChild(card_container);
-                    
-                            const image = document.createElement("img");
-                            const imageSource = "./img/" + data[i] + ".jpg"; 
-                            image.src = imageSource; 
-                    
-                            card_container.appendChild(image);
-                    
-                            const name = document.createElement("h3");
-                            name.textContent = data[i];
-                    
-                            card_container.appendChild(name);
-                        }
-                    }
-                </code>
-            </pre>
-        </ul>
-        <li>In deze functie itereren we over elk dier binnen de data array.</li>
-        <li>Per dier tonen we de foto + de naam.</li>
-        <li>Er zitten ook leuke extraatjes in deze code om ervoor te zorgen dat het kan gedraaid worden. De setTimeout zorgt ervoor dat de kaarten terug omgedraaid worden als het een foute combinatie is.</li>
-        <li>Wat nu nog moet gebeuren is een belangrijke stap, we hebben een paar functies geschreven maar nog niet aangeroepen. Dit zorgt ervoor dat ze nooit worden uitgevoerd. Voeg dit nog toe aan je code:</li>
-        <ul>
-            <pre>
-                <code class="language-js">
-                    renderData(data);
-
-                    randomizeCards(animals);
-                </code>
-            </pre>
-        </ul>
-        <li>We zitten nu aan de laatste stap van onze Javascript. We moeten nu controleren of we gewonnen hebben of niet. Voeg deze functie toe vlak voor je <strong>renderData(data)</strong> functie.</li>
-        <ul>
-            <pre>
-                <code class="language-js">
-                    function checkForWin() {
-                        if (mathingPairs === 6) {
-                            const $container = document.getElementById("container");
-                            $container.innerHTML = "";
-                    
-                            const message_container = document.createElement("div");
-                            message_container.className = "message_container";
-                    
-                            $container.appendChild(message_container);
-                            
-                            const message = document.createElement("h3");
-                            message.textContent = "Goed gespeeld!";
-                    
-                            message_container.appendChild(message);
-                    
-                            const refreshButton = document.createElement("button");
-                            refreshButton.textContent = "Speel opnieuw";
-                            refreshButton.onclick = function() {
-                                location.reload();
+                        
+                                } 
+                        
+                                $container.appendChild(card_container);
+                        
+                                const image = document.createElement("img");
+                                const imageSource = "./img/" + data[i] + ".jpg"; 
+                                image.src = imageSource; 
+                        
+                                card_container.appendChild(image);
+                        
+                                const name = document.createElement("h3");
+                                name.textContent = data[i];
+                        
+                                card_container.appendChild(name);
                             }
-                    
-                            message_container.appendChild(refreshButton);
-                    
-                            const tekst = document.createElement("p");
-                            tekst.textContent = "Wil je zien hoe je dit kunt maken? kijk dan naar ons"
-                    
-                            message_container.appendChild(tekst);
-                    
-                            const link = document.createElement("a");
-                            link.href = "stappenplan.html";
-                            link.textContent = "stappenplan";
-                    
-                            message_container.appendChild(link);
-                    
-                            const sound = new Audio("sounds/ta-da.mp3");
-                            sound.play();
                         }
-                    }
-                </code>
-            </pre>
-            <li>Deze functie doet niet zo veel, het controleert of we 6 duo's gevonden hebben. Als we er 6 hebben gevonden dan wordt een tekst en knop (om opnieuw te spelen) op het scherm getoond.</li>
+                    </code>
+                </pre>
+                <p>In deze functie itereren we over elk dier binnen de data array.</p>
+                <p>Per dier tonen we de foto + de naam.</p>
+            </li>
+
+            <li>
+                <p>Wat nu nog moet gebeuren is een belangrijke stap, we hebben een paar functies geschreven maar nog niet aangeroepen. Dit zorgt ervoor dat ze nooit worden uitgevoerd. Voeg dit nog toe aan je code:</p>
+                <pre>
+                    <code class="language-js">
+                        renderData(data);
+    
+                        randomizeCards(animals);
+                    </code>
+                </pre>
+            </li>
+
+            <li>
+                <p>We zitten nu aan de laatste stap van onze Javascript. We moeten nu controleren of we gewonnen hebben of niet. Voeg deze functie toe vlak voor je <strong>renderData(data)</strong> functie</p>
+                <pre>
+                    <code class="language-js">
+                        function checkForWin() {
+                            if (mathingPairs === 6) {
+                                const $container = document.getElementById("container");
+                                $container.innerHTML = "";
+                        
+                                const message_container = document.createElement("div");
+                                message_container.className = "message_container";
+                        
+                                $container.appendChild(message_container);
+                                
+                                const message = document.createElement("h3");
+                                message.textContent = "Goed gespeeld!";
+                        
+                                message_container.appendChild(message);
+                        
+                                const refreshButton = document.createElement("button");
+                                refreshButton.textContent = "Speel opnieuw";
+                                refreshButton.onclick = function() {
+                                    location.reload();
+                                }
+                        
+                                message_container.appendChild(refreshButton);
+                        
+                                const tekst = document.createElement("p");
+                                tekst.textContent = "Wil je zien hoe je dit kunt maken? kijk dan naar ons"
+                        
+                                message_container.appendChild(tekst);
+                        
+                                const link = document.createElement("a");
+                                link.href = "stappenplan.html";
+                                link.textContent = "stappenplan";
+                        
+                                message_container.appendChild(link);
+                        
+                                const sound = new Audio("sounds/ta-da.mp3");
+                                sound.play();
+                            }
+                        }
+                    </code>
+                </pre>
+                <p>Deze functie doet niet zo veel, het controleert of we 6 duo's gevonden hebben. Als we er 6 hebben gevonden dan wordt een tekst en knop (om opnieuw te spelen) op het scherm getoond.</p>
+            </li>
+
+
+
         </ul>
-    </ul>
+    </div>
+                    
+    </div>
+</div>
     <script src="js/prism.js"></script>
 </body>
 </html>

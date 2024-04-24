@@ -10,8 +10,8 @@ h1 {
 #container {
     background-color: #FADC44;
     border-radius: 2rem;
-    min-width: 62.9375rem;
-    min-height: 42.0625rem;
+    width: 60%;
+    height: 100vh;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -22,6 +22,7 @@ h1 {
     display: grid;
     grid-template-columns: repeat(4, 1fr); 
     gap: 2rem;
+    margin: 2rem;
 }
 
 .card {
@@ -96,39 +97,57 @@ h1 {
     }
 }
 
-.hamburger{
-    & .wrapper{
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 100%;
-        height: 100%;
+.main__container {
+    display: flex;
 
-        background-color: #4B3F06;
-        transition: all .5s ease-in-out;
-    }
+    & aside {
+        width: 20%;
+        padding-top: 5rem;
+        height: 110vh;
+        padding-left: 2rem;
+        
 
-    & #active:checked + .wrapper{
-        right: 0;
-    }
+        background-color: #FBE573;
+        border-right: 2px solid #4B3F06;
 
-    & .menu-btn {
-        position: absolute;
-        top: 1rem;
-        right: 1rem;
-        z-index: 1;
-        cursor: pointer;
-    }
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
 
-    & .menu-btn span,
-      .menu-btn::before,
-        .menu-btn::after {
-            content: '';
-            position: absolute;
-            width: 2rem;
-            height: 0.25rem;
-            background-color: #FDEDA1;
-            border-radius: 0.25rem;
-            transition: all .5s ease-in-out;
+        & ul {
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            margin-top: 2rem;
+
+            & li {
+                margin-bottom: 1rem;
+
+                & a {
+                    color: #4B3F06;
+                    text-decoration: none;
+                    font-family: Arial, Helvetica, sans-serif;
+                }
+            }
         }
+    }
+
+    & .game__container {
+        width: 80%;
+        height: 100vh;
+
+        display: flex;
+        justify-content: center;
+        margin-left: 10rem;
+
+
+        & .game{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); 
+            gap: 2rem;
+            margin: 5rem 2rem;
+        }
+    }
 }
