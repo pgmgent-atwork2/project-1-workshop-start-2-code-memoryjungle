@@ -53,12 +53,11 @@ body{
 }
 
 .bg-img--1 {
-    background-image: url('../img/blad-1.png');
+    background-image: url('../img/blad-1.png'), url(../img/blad-2.png), url(../img/blad-3.png), url(../img/blad-4.png), url(../img/blad-3.png), url(../img/blad-1.png);
     background-repeat: no-repeat;
-    background-position: -60px -50px;
+    background-position: -60px -50px, 30px -50px, 200px -50px, 1000px -50px, 900px -50px, 1100px -50px;
     padding: 0;
     margin: 0;
-
 }
 
 .stappenplan {
